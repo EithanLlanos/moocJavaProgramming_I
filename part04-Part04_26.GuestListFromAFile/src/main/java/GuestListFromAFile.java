@@ -12,7 +12,14 @@ public class GuestListFromAFile {
         String file = scanner.nextLine();
 
         ArrayList<String> list = new ArrayList<>();
-        // implement reading the file here.
+        try(Scanner scannFil = new Scanner(Paths.get(file))){
+            while(scannFil.hasNextLine()){
+                list.add(scannFil.nextLine());
+            }
+        }
+        catch(Exception e){
+                System.out.println("Error: "+e);
+                }
         System.out.println("");
 
         System.out.println("Enter names, an empty line quits.");

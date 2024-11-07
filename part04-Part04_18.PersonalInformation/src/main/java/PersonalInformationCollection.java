@@ -12,18 +12,15 @@ public class PersonalInformationCollection {
         System.out.println();
         while(true){
             System.out.print("First name: ");
-            System.out.flush();
             String v1 = scanner.nextLine();
             if(v1.isEmpty()) break;
             
-            System.out.println();
-            
-            System.out.print("Last name: ");
+            System.out.println("Last name: ");
             String v2 = scanner.nextLine();
             
-            System.out.println();
+            //System.out.println();
             
-            System.out.print("Identification number: ");
+            System.out.println("Identification number: ");
             String v3 = scanner.nextLine();
         
             infoCollection.add(new PersonalInformation(v1,v2,v3));
@@ -31,7 +28,7 @@ public class PersonalInformationCollection {
         }
         
         for(PersonalInformation e: infoCollection){
-            System.out.println(e.getFirstName()+ " " + e.getLastName());
+            System.out.print("\n"+e.getFirstName()+ " " + e.getLastName());
         }
     }
 }
